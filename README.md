@@ -14,9 +14,6 @@ El proyecto se enfoca en proporcionar una interfaz de usuario limpia y moderna, 
 <img width="1906" height="912" alt="image" src="https://github.com/user-attachments/assets/01cb39db-6796-4302-80ce-a17b42919398" />
 
 
-*Ejemplo de cómo enlazar la imagen:*
-`![Captura de la Aplicación del Clima](assets/weather-app-screenshot.png)`
-
 ## 💻 Tecnologías Utilizadas
 
 | Categoría | Tecnología |
