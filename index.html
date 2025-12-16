@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>💰 Mi Calculadora de Gastos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>💸 Calculadora de Gastos</h1>
+            <p class="subtitle">¡Controla tus finanzas de forma simple!</p>
+        </header>
+
+        <div class="balance-section">
+            <div class="balance-card">
+                <span class="balance-label">Balance Total</span>
+                <h2 class="balance-amount" id="totalBalance">$0.00</h2>
+            </div>
+            <div class="stats-grid">
+                <div class="stat-card income">
+                    <span class="stat-icon">📈</span>
+                    <div>
+                        <p class="stat-label">Ingresos</p>
+                        <p class="stat-amount" id="totalIncome">$0.00</p>
+                    </div>
+                </div>
+                <div class="stat-card expense">
+                    <span class="stat-icon">📉</span>
+                    <div>
+                        <p class="stat-label">Gastos</p>
+                        <p class="stat-amount" id="totalExpense">$0.00</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-section">
+            <h3>➕ Agregar Transacción</h3>
+            <form id="transactionForm">
+                <div class="form-group">
+                    <label for="description">Descripción</label>
+                    <input type="text" id="description" placeholder="Ej: Café con amigos ☕" required>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="amount">Monto</label>
+                        <input type="number" id="amount" placeholder="0.00" step="0.01" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="type">Tipo</label>
+                        <select id="type" required>
+                            <option value="expense">Gasto 💸</option>
+                            <option value="income">Ingreso 💰</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="category">Categoría</label>
+                    <select id="category" required>
+                        <option value="comida">🍔 Comida</option>
+                        <option value="transporte">🚗 Transporte</option>
+                        <option value="entretenimiento">🎮 Entretenimiento</option>
+                        <option value="salud">💊 Salud</option>
+                        <option value="educacion">📚 Educación</option>
+                        <option value="compras">🛍️ Compras</option>
+                        <option value="servicios">🔧 Servicios</option>
+                        <option value ="sueldo">💼 Sueldo</option>
+                        <option value="otros">📦 Otros</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn-primary">Agregar ✨</button>
+            </form>
+        </div>
+
+        <div class="transactions-section">
+            <div class="section-header">
+                <h3>📋 Historial de Transacciones</h3>
+                <button id="clearAll" class="btn-clear">Limpiar Todo 🗑️</button>
+            </div>
+            <div id="transactionsList" class="transactions-list">
+                <p class="empty-message">¡No hay transacciones aún! Comienza agregando una 🚀</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
